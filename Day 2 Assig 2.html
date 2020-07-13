@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <body>
+            <script>
+                var d = new Date();
+                var hr = d.getHours() ;
+                if(hr > 12) {
+                    hr = hr - 12 + " PM";
+                }
+                else{
+                    hr = hr + " AM";
+                }
+                
+                var time = hr + " : " + d.getMinutes() + " : " + d.getSeconds();
+                var weekday = new Array(7);
+                weekday[0] = "Sunday";
+                weekday[1] = "Monday";
+                weekday[2] = "Tuesday";
+                weekday[3] = "Wednesday";
+                weekday[4] = "Thursday";
+                weekday[5] = "Friday";
+                weekday[6] = "Saturday";
+                document.write("<b>Todayn is :</b>"+ weekday[d.getDay()])
+                document.write("<br><b>Current Time is :</b>" + time);
+            </script>
+            <br>
+            <button onclick="window.print()"Click to print page></button>
+        </body>
+    </head>
+</html>
